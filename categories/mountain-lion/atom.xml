@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mountain lion | -rw-r--r-- mitzip]]></title>
+  <link href="http://mitzip.com/categories/mountain-lion/atom.xml" rel="self"/>
+  <link href="http://mitzip.com/"/>
+  <updated>2013-06-21T14:51:40-05:00</updated>
+  <id>http://mitzip.com/</id>
+  <author>
+    <name><![CDATA[mitzip]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FOSSX Mountain Lion: OSX Setup For The FOSS Mind]]></title>
+    <link href="http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind/"/>
+    <updated>2013-06-21T14:18:00-05:00</updated>
+    <id>http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my main workstation for work.
+This will be a collection of steps it takes to make OSX suitable for the
+<abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
+
+<pre><code>mkdir $HOME/.homebrew &amp;&amp; curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
