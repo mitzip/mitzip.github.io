@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Home Router Hunt: Hardware"
+date: 2013-06-10 14:32
+comments: true
+categories: [router,linux,gentoo,openbsd,wifi,itx,arm,raspberry pi]
+---
+
+### Project Goals
+- Build an epic wireless router/firewall. (preferring <abbr title="Open-Source Hardware">OSHW</abbr> 
+	and <em>requiring</em> <abbr title="Open-Source Software">OSS</abbr>)
+- It should be cheap enough to provide to family and friends.
+
+I've been on the hunt for the perfect home router platform for a while.
+There was a time when I thought it would be best to have my 
+<abbr title="Home Theater Personal Computer">HTPC</abbr>, 
+<abbr title="Network Attached Storage">NAS</abbr>, 
+<abbr title="Wireless Access Point">WAP</abbr>, 
+router and firewall needs all provided by the same machine. I've since 
+concluded that putting all your eggs in one basket is often not the 
+best choice.
+
+For one, lots of work, by very intelligent and specialized individuals, 
+has been put into different <abbr title="Operating Systems">OSs</abbr> 
+and distributions that are tailored to excel at a certain task. I see no 
+reason to throw all that expertise away.
+
+Second, the software packages needed to fulfil my needs are diverse, 
+but also conflicting. For example, having a <abbr title="Graphical User Interface">GUI</abbr>, 
+bleeding-edge HTPC software or an experimental file system running 
+on a router/firewall should make anyone cringe. Of course, a reboot 
+bringing down the whole house is rather annoying as well.
+
+Finally, even if I was okay with all of those drawbacks, my second 
+goal puts a cap on how expensive said device can be. The hardware 
+required to be the end-all-be-all home computer would be 
+prohibitively expensive to try and provide to all my family and 
+friends that I support.
