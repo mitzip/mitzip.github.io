@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opensource | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/opensource/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T14:51:40-05:00</updated>
+  <updated>2013-06-21T15:09:45-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -18,11 +18,37 @@
     <link href="http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind/"/>
     <updated>2013-06-21T14:18:00-05:00</updated>
     <id>http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my main workstation for work.
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my main workstation.
 This will be a collection of steps it takes to make OSX suitable for the
 <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
 
 <pre><code>mkdir $HOME/.homebrew &amp;&amp; curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+
+// export PATHs
+
+brew install git
+brew install --disableetc zsh
+
+brew install vim
+
+# Adapted from:
+# http://thomasrieder.github.io/blog/2012/09/23/octopress-and-mountain-lion/
+curl -L https://get.rvm.io | bash -s stable
+rvm pkg install iconv
+rvm install 1.9.3 --with-gcc=clang --with-iconv-dir=$rvm_path/usr
+rvm use 1.9.3
+
+git clone git://github.com/&lt;yourUser&gt;/&lt;yourOctopress&gt;.git Projects/blog
+cd Projects/blog
+gem install bundler
+bundle install
+
+git checkout -b source origin/source
+rake setup_github_pages
+
+# if you have custom domain fix your _config.yml as setup_github_pages
+# changes your domain there to the github.io domain
+# vim _config.yml
 </code></pre>
 ]]></content>
   </entry>
