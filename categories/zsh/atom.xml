@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: osx | -rw-r--r-- mitzip]]></title>
-  <link href="http://mitzip.com/categories/osx/atom.xml" rel="self"/>
+  <title><![CDATA[Category: zsh | -rw-r--r-- mitzip]]></title>
+  <link href="http://mitzip.com/categories/zsh/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
   <updated>2013-06-21T18:02:06-05:00</updated>
   <id>http://mitzip.com/</id>

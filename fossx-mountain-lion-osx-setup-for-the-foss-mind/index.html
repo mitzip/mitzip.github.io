@@ -96,33 +96,53 @@ This will be a collection of steps it takes to make OSX suitable for the &hellip
 This will be a collection of steps it takes to make OSX suitable for the
 <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
 
-<pre><code>mkdir $HOME/.homebrew &amp;&amp; curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+<pre><code>cd $HOME
 
-// export PATHs
+mkdir .homebrew &amp;&amp; curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C .homebrew
 
-brew install git
-brew install --disableetc zsh
+brew install git vim
 
-brew install vim
+# Setup Vim with my good friend Matt's config
+git clone https://github.com/MattRWallace/vimfiles.git ~/.vim
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+ln -s ~/.vim/.vimrc ~/.vimrc
+vim +BundleInstall +qall
 
-# Adapted from:
+# zsh setup adapted from
+# http://ricochen.wordpress.com/2012/09/30/mac-os-x-lion-zsh-installation-with-brew-guide/
+brew install --disable-etcdir zsh
+brew install zsh-completions zsh-lovers
+git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+echo "fpath=($HOME/.homebrew/share/zsh-completions $fpath)" &gt;&gt; .zshrc
+echo "unalias run-help                                                                                                                                                                                               
+autoload run-help
+HELPDIR=$HOME/.homebrew/share/zsh/helpfiles" &gt;&gt; ~/.zshrc 
+
+# Setup RVM for Octopress adapted from:
 # http://thomasrieder.github.io/blog/2012/09/23/octopress-and-mountain-lion/
 curl -L https://get.rvm.io | bash -s stable
 rvm pkg install iconv
 rvm install 1.9.3 --with-gcc=clang --with-iconv-dir=$rvm_path/usr
 rvm use 1.9.3
 
+# yes looks dangerous, but if it's a new OSX install, you're not missing anything
+rm -f .bash*
+
+mkdir Projects
+
+# Get previous octopress install and setup it up on new machine
+# or use git clone git://github.com/imathis/octopress.git for new install
 git clone git://github.com/&lt;yourUser&gt;/&lt;yourOctopress&gt;.git Projects/blog
 cd Projects/blog
 gem install bundler
 bundle install
-
+# or use `rake install` for new install to create branches anew
 git checkout -b source origin/source
 rake setup_github_pages
-
-# if you have custom domain fix your _config.yml as setup_github_pages
+# if you have custom domain, fix your _config.yml as setup_github_pages
 # changes your domain there to the github.io domain
-# vim _config.yml
+vim _config.yml
 </code></pre>
 </div>
 
@@ -151,7 +171,7 @@ rake setup_github_pages
 
 <span class="categories">
   
-    <a class='category' href='/categories/apple/'>apple</a>, <a class='category' href='/categories/foss/'>foss</a>, <a class='category' href='/categories/linux/'>linux</a>, <a class='category' href='/categories/mountain-lion/'>mountain lion</a>, <a class='category' href='/categories/opensource/'>opensource</a>, <a class='category' href='/categories/osx/'>osx</a>
+    <a class='category' href='/categories/apple/'>apple</a>, <a class='category' href='/categories/foss/'>foss</a>, <a class='category' href='/categories/git/'>git</a>, <a class='category' href='/categories/homebrew/'>homebrew</a>, <a class='category' href='/categories/linux/'>linux</a>, <a class='category' href='/categories/mountain-lion/'>mountain lion</a>, <a class='category' href='/categories/octopress/'>octopress</a>, <a class='category' href='/categories/opensource/'>opensource</a>, <a class='category' href='/categories/osx/'>osx</a>, <a class='category' href='/categories/rvm/'>rvm</a>, <a class='category' href='/categories/vim/'>vim</a>, <a class='category' href='/categories/zsh/'>zsh</a>
   
 </span>
 
