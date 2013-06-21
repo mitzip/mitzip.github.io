@@ -4,7 +4,7 @@
   <title><![CDATA[Category: foss | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/foss/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T18:54:02-05:00</updated>
+  <updated>2013-06-21T18:57:27-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -24,9 +24,8 @@ some conversion to be amenable to the <abbr title="Free and Open Source Software
 
 <p>Below are the steps it took for me feel at home.</p>
 
-<blockquote>NOTE: This assumes you do *NOT* have root access, this is my employers machine after all. However,
-It *DOES* assume that Xcode command line tools are installed.</blockquote>
-
+<blockquote><p>NOTE: This assumes you do <em>NOT</em> have root access, this is my employers machine after all. However,
+It <em>DOES</em> assume that Xcode command line tools are installed.</p></blockquote>
 
 <p>``` sh
 cd $HOME</p>
