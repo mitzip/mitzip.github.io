@@ -4,7 +4,7 @@
   <title><![CDATA[Category: zsh | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/zsh/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T18:06:46-05:00</updated>
+  <updated>2013-06-21T18:50:31-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -18,15 +18,26 @@
     <link href="http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind/"/>
     <updated>2013-06-21T14:18:00-05:00</updated>
     <id>http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my main workstation.
-This will be a collection of steps it takes to make OSX suitable for the
-<abbr title="Free and Open Source Software">FOSS</abbr> mind.
-``` sh
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my primary workstation, work requirements and all.
+It could have been much worse, I could be forced to work on M$ Windows. ;&ndash;) Though, OSX still takes
+some conversion to be aminable to the <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
+
+<p>Below are the steps it took to make me feel at home.
+NOTE: This assumes you do <em>NOT</em> have root access, this is my employers machine after all. However,
+It <em>DOES</em> assume that Xcode command line tools are installed.</p>
+
+<p>``` sh
 cd $HOME</p>
 
-<p>mkdir .homebrew &amp;&amp; curl -L <a href="https://github.com/mxcl/homebrew/tarball/master">https://github.com/mxcl/homebrew/tarball/master</a> | tar xz &mdash;strip 1 -C .homebrew</p>
+<h1>These three lines are one, FYI. Seperated for readability</h1>
 
-<p>brew install git vim</p>
+<h1>though they should execute just fine copying and pasting as 3 lines.</h1>
+
+<p>mkdir .homebrew &amp;&amp;
+curl -L <a href="https://github.com/mxcl/homebrew/tarball/master">https://github.com/mxcl/homebrew/tarball/master</a> |
+tar xz &mdash;strip 1 -C .homebrew</p>
+
+<p>~/.homebrew/bin/brew install git vim</p>
 
 <h1>Setup Vim with my good friend Matt&rsquo;s config</h1>
 
@@ -39,25 +50,32 @@ vim +BundleInstall +qall</p>
 
 <h1><a href="http://ricochen.wordpress.com/2012/09/30/mac-os-x-lion-zsh-installation-with-brew-guide/">http://ricochen.wordpress.com/2012/09/30/mac-os-x-lion-zsh-installation-with-brew-guide/</a></h1>
 
-<p>brew install &mdash;disable-etcdir zsh
-brew install zsh-completions zsh-lovers
+<p>~/.homebrew/bin/brew install &mdash;disable-etcdir zsh
+~/.homebrew/bin/brew install zsh-completions zsh-lovers
 git clone <a href="https://github.com/robbyrussell/oh-my-zsh.git">https://github.com/robbyrussell/oh-my-zsh.git</a> .oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-echo &ldquo;fpath=($HOME/.homebrew/share/zsh-completions $fpath)&rdquo; >> .zshrc
 echo &ldquo;unalias run-help                                                                                                                                                                                             <br/>
 autoload run-help
-HELPDIR=$HOME/.homebrew/share/zsh/helpfiles&rdquo; >> ~/.zshrc</p>
+HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
+fpath=($HOME/.homebrew/share/zsh-completions $fpath)&rdquo; >> ~/.zshrc
+echo &ldquo;if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi&rdquo; > .profile
+echo &ldquo;export PATH=&lsquo;$HOME/.rvm/bin:$HOME/.homebrew/bin:$HOME/.bin:$PATH&rsquo;
+export EDITOR=&lsquo;$HOME/.homebrew/bin/vim&rsquo;&rdquo; > .zprofile</p>
+
+<h1>Lets enter our new awesome Z shell</h1>
+
+<p>~/.homebrew/bin/zsh -l</p>
 
 <h1>Setup RVM for Octopress adapted from:</h1>
 
 <h1><a href="http://thomasrieder.github.io/blog/2012/09/23/octopress-and-mountain-lion/">http://thomasrieder.github.io/blog/2012/09/23/octopress-and-mountain-lion/</a></h1>
 
-<p>curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable
+<p>curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | zsh -s stable
 rvm pkg install iconv
 rvm install 1.9.3 &mdash;with-gcc=clang &mdash;with-iconv-dir=$rvm_path/usr
 rvm use 1.9.3</p>
 
-<h1>yes looks dangerous, but if it&rsquo;s a new OSX install, you&rsquo;re not missing anything</h1>
+<h1>Looks dangerous, but if it&rsquo;s a new OSX install, you&rsquo;re not missing anything</h1>
 
 <p>rm -f .bash*</p>
 
@@ -77,9 +95,9 @@ bundle install</p>
 <p>git checkout -b source origin/source
 rake setup_github_pages</p>
 
-<h1>if you have custom domain, fix your _config.yml as setup_github_pages</h1>
+<h1>if you have custom domain, fix your _config.yml as</h1>
 
-<h1>changes your domain there to the github.io domain</h1>
+<h1><code>rake setup_github_pages</code> changes your domain to <user>.github.io</h1>
 
 <p>vim _config.yml
 ```</p>

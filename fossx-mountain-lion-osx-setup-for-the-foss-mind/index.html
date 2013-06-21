@@ -9,8 +9,8 @@
   <meta name="author" content="mitzip">
 
   
-  <meta name="description" content="I&rsquo;ve recently had to convert from Linux to OSX as my main workstation.
-This will be a collection of steps it takes to make OSX suitable for the &hellip;">
+  <meta name="description" content="I&rsquo;ve recently had to convert from Linux to OSX as my primary workstation, work requirements and all.
+It could have been much worse, I could be &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,9 +92,13 @@ This will be a collection of steps it takes to make OSX suitable for the &hellip
   </header>
 
 
-<div class="entry-content"><p>I&rsquo;ve recently had to convert from Linux to OSX as my main workstation.
-This will be a collection of steps it takes to make OSX suitable for the
-<abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
+<div class="entry-content"><p>I&rsquo;ve recently had to convert from Linux to OSX as my primary workstation, work requirements and all.
+It could have been much worse, I could be forced to work on M$ Windows. ;&ndash;) Though, OSX still takes
+some conversion to be aminable to the <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
+
+<p>Below are the steps it took to make me feel at home.
+NOTE: This assumes you do <em>NOT</em> have root access, this is my employers machine after all. However,
+It <em>DOES</em> assume that Xcode command line tools are installed.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -143,11 +147,25 @@ This will be a collection of steps it takes to make OSX suitable for the
 <span class='line-number'>45</span>
 <span class='line-number'>46</span>
 <span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
 </span><span class='line'>
-</span><span class='line'>mkdir .homebrew <span class="o">&amp;&amp;</span> curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C .homebrew
+</span><span class='line'><span class="c"># These three lines are one, FYI. Seperated for readability</span>
+</span><span class='line'><span class="c"># though they should execute just fine copying and pasting as 3 lines.</span>
+</span><span class='line'>mkdir .homebrew <span class="o">&amp;&amp;</span>
+</span><span class='line'>curl -L https://github.com/mxcl/homebrew/tarball/master |
+</span><span class='line'>tar xz --strip 1 -C .homebrew
 </span><span class='line'>
-</span><span class='line'>brew install git vim
+</span><span class='line'>~/.homebrew/bin/brew install git vim
 </span><span class='line'>
 </span><span class='line'><span class="c"># Setup Vim with my good friend Matt&#39;s config</span>
 </span><span class='line'>git clone https://github.com/MattRWallace/vimfiles.git ~/.vim
@@ -157,23 +175,29 @@ This will be a collection of steps it takes to make OSX suitable for the
 </span><span class='line'>
 </span><span class='line'><span class="c"># zsh setup adapted from</span>
 </span><span class='line'><span class="c"># http://ricochen.wordpress.com/2012/09/30/mac-os-x-lion-zsh-installation-with-brew-guide/</span>
-</span><span class='line'>brew install --disable-etcdir zsh
-</span><span class='line'>brew install zsh-completions zsh-lovers
+</span><span class='line'>~/.homebrew/bin/brew install --disable-etcdir zsh
+</span><span class='line'>~/.homebrew/bin/brew install zsh-completions zsh-lovers
 </span><span class='line'>git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
 </span><span class='line'>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;fpath=($HOME/.homebrew/share/zsh-completions $fpath)&quot;</span> &gt;&gt; .zshrc
 </span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;unalias run-help                                                                                                                                                                                               </span>
 </span><span class='line'><span class="s2">autoload run-help</span>
-</span><span class='line'><span class="s2">HELPDIR=$HOME/.homebrew/share/zsh/helpfiles&quot;</span> &gt;&gt; ~/.zshrc
+</span><span class='line'><span class="s2">HELPDIR=$HOME/.homebrew/share/zsh/helpfiles</span>
+</span><span class='line'><span class="s2">fpath=($HOME/.homebrew/share/zsh-completions $fpath)&quot;</span> &gt;&gt; ~/.zshrc
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi&quot;</span> &gt; .profile
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;export PATH=&#39;$HOME/.rvm/bin:$HOME/.homebrew/bin:$HOME/.bin:$PATH&#39;</span>
+</span><span class='line'><span class="s2">export EDITOR=&#39;$HOME/.homebrew/bin/vim&#39;&quot;</span> &gt; .zprofile
+</span><span class='line'>
+</span><span class='line'><span class="c"># Lets enter our new awesome Z shell</span>
+</span><span class='line'>~/.homebrew/bin/zsh -l
 </span><span class='line'>
 </span><span class='line'><span class="c"># Setup RVM for Octopress adapted from:</span>
 </span><span class='line'><span class="c"># http://thomasrieder.github.io/blog/2012/09/23/octopress-and-mountain-lion/</span>
-</span><span class='line'>curl -L https://get.rvm.io | bash -s stable
+</span><span class='line'>curl -L https://get.rvm.io | zsh -s stable
 </span><span class='line'>rvm pkg install iconv
 </span><span class='line'>rvm install 1.9.3 --with-gcc<span class="o">=</span>clang --with-iconv-dir<span class="o">=</span><span class="nv">$rvm_path</span>/usr
 </span><span class='line'>rvm use 1.9.3
 </span><span class='line'>
-</span><span class='line'><span class="c"># yes looks dangerous, but if it&#39;s a new OSX install, you&#39;re not missing anything</span>
+</span><span class='line'><span class="c"># Looks dangerous, but if it&#39;s a new OSX install, you&#39;re not missing anything</span>
 </span><span class='line'>rm -f .bash*
 </span><span class='line'>
 </span><span class='line'>mkdir Projects
@@ -187,8 +211,8 @@ This will be a collection of steps it takes to make OSX suitable for the
 </span><span class='line'><span class="c"># or use `rake install` for new install to create branches anew</span>
 </span><span class='line'>git checkout -b <span class="nb">source </span>origin/source
 </span><span class='line'>rake setup_github_pages
-</span><span class='line'><span class="c"># if you have custom domain, fix your _config.yml as setup_github_pages</span>
-</span><span class='line'><span class="c"># changes your domain there to the github.io domain</span>
+</span><span class='line'><span class="c"># if you have custom domain, fix your _config.yml as </span>
+</span><span class='line'><span class="c"># `rake setup_github_pages` changes your domain to &lt;user&gt;.github.io</span>
 </span><span class='line'>vim _config.yml
 </span></code></pre></td></tr></table></div></figure>
 
