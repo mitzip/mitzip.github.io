@@ -4,7 +4,7 @@
   <title><![CDATA[Category: homebrew | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-22T01:19:30-05:00</updated>
+  <updated>2013-06-22T01:25:06-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -49,6 +49,12 @@ curl -L <a href="https://github.com/mxcl/homebrew/tarball/master">https://github
 tar xz &mdash;strip 1 -C .homebrew</p>
 
 <p>~/.homebrew/bin/brew install git vim</p>
+
+<h1>Setup git</h1>
+
+<p>git config &mdash;global user.name mitzip
+git config &mdash;global user.email <my email>
+git config &mdash;global push.default simple</p>
 
 <h1>Setup Vim with my good friend Matt&rsquo;s config</h1>
 

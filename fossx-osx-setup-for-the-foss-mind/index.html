@@ -168,6 +168,11 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 <span class='line-number'>55</span>
 <span class='line-number'>56</span>
 <span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># These three lines are one, FYI. Seperated for readability</span>
@@ -177,6 +182,11 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span><span class='line'>tar xz --strip 1 -C .homebrew
 </span><span class='line'>
 </span><span class='line'>~/.homebrew/bin/brew install git vim
+</span><span class='line'>
+</span><span class='line'><span class="c"># Setup git</span>
+</span><span class='line'>git config --global user.name mitzip
+</span><span class='line'>git config --global user.email &lt;my email&gt;
+</span><span class='line'>git config --global push.default simple
 </span><span class='line'>
 </span><span class='line'><span class="c"># Setup Vim with my good friend Matt&#39;s config</span>
 </span><span class='line'>git clone https://github.com/MattRWallace/vimfiles.git ~/.vim
