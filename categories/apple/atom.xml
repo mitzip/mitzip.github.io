@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apple | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/apple/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:18:04-05:00</updated>
+  <updated>2013-06-21T19:32:00-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -21,6 +21,12 @@
     <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my primary workstation, work requirements and all.
 It could have been much worse, I could have been forced to work on M$ Windows. ;&ndash;) Though, OSX still
 takes some conversion to be amenable to the <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
+
+<p>At the very least, I need one command access to every open-source application! Luckily,
+<a href="http://mxcl.github.io/homebrew/">Homebrew</a> does just that for OSX, well almost. Additionally, I need
+<a href="http://vim.org">vim</a> and <a href="http://zsh.org">zsh</a> with all their awesome plugins. Of course,
+<a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
+<a href="http://octopress.org">octopress</a> blog!</p>
 
 <p>Below are the steps it took for me feel at home.</p>
 
