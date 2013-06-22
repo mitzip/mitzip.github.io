@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/osx/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-22T01:25:06-05:00</updated>
+  <updated>2013-06-22T01:28:05-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -75,9 +75,9 @@ echo &ldquo;unalias run-help
 autoload run-help
 HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
 fpath=($HOME/.homebrew/share/zsh-completions $fpath)&rdquo; >> ~/.zshrc
-echo &ldquo;if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi&rdquo; > .profile
+echo &ldquo;if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi&rdquo; > ~/.profile
 echo &ldquo;export PATH=&lsquo;$HOME/.rvm/bin:$HOME/.homebrew/bin:$HOME/.bin:$PATH&rsquo;
-export EDITOR=&lsquo;$HOME/.homebrew/bin/vim&rsquo;&rdquo; > .zprofile</p>
+export EDITOR=&lsquo;$HOME/.homebrew/bin/vim&rsquo;&rdquo; > ~/.zprofile</p>
 
 <h1>Lets enter our new awesome Z shell</h1>
 
