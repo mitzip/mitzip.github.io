@@ -4,7 +4,7 @@
   <title><![CDATA[-rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:14:08-05:00</updated>
+  <updated>2013-06-21T19:15:59-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -106,7 +106,7 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span><span class='line'>~/.homebrew/bin/brew install zsh-completions zsh-lovers
 </span><span class='line'>git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
 </span><span class='line'>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;unalias run-help                                                                                                                                                                                               </span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;unalias run-help</span>
 </span><span class='line'><span class="s2">autoload run-help</span>
 </span><span class='line'><span class="s2">HELPDIR=$HOME/.homebrew/share/zsh/helpfiles</span>
 </span><span class='line'><span class="s2">fpath=($HOME/.homebrew/share/zsh-completions $fpath)&quot;</span> &gt;&gt; ~/.zshrc

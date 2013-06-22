@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/vim/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:14:08-05:00</updated>
+  <updated>2013-06-21T19:15:59-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -55,7 +55,7 @@ vim +BundleInstall +qall</p>
 ~/.homebrew/bin/brew install zsh-completions zsh-lovers
 git clone <a href="https://github.com/robbyrussell/oh-my-zsh.git">https://github.com/robbyrussell/oh-my-zsh.git</a> .oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-echo &ldquo;unalias run-help                                                                                                                                                                                             <br/>
+echo &ldquo;unalias run-help
 autoload run-help
 HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
 fpath=($HOME/.homebrew/share/zsh-completions $fpath)&rdquo; >> ~/.zshrc
