@@ -4,7 +4,7 @@
   <title><![CDATA[-rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:03:23-05:00</updated>
+  <updated>2013-06-21T19:11:44-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -25,7 +25,7 @@ some conversion to be amenable to the <abbr title="Free and Open Source Software
 <p>Below are the steps it took for me feel at home.</p>
 
 <blockquote><p>NOTE: This assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
-it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> are installed.</p></blockquote>
+it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> is installed.</p></blockquote>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -193,9 +193,9 @@ friends that I support.</p>
   <entry>
     <title type="html"><![CDATA[About Me]]></title>
     <link href="http://mitzip.com/about-me/"/>
-    <updated>2013-06-10T14:31:00-05:00</updated>
+    <updated>2013-06-09T14:31:00-05:00</updated>
     <id>http://mitzip.com/about-me</id>
-    <content type="html"><![CDATA[<h3>This page intentionally left blank.</h3>
+    <content type="html"><![CDATA[<h3>This post intentionally left blank.</h3>
 ]]></content>
   </entry>
   

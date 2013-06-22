@@ -4,7 +4,7 @@
   <title><![CDATA[Category: homebrew | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:03:23-05:00</updated>
+  <updated>2013-06-21T19:11:44-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -25,7 +25,7 @@ some conversion to be amenable to the <abbr title="Free and Open Source Software
 <p>Below are the steps it took for me feel at home.</p>
 
 <blockquote><p>NOTE: This assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
-it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> are installed.</p></blockquote>
+it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> is installed.</p></blockquote>
 
 <p>``` sh
 cd $HOME</p>
