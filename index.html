@@ -106,131 +106,12 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
 <a href="http://octopress.org">octopress</a> blog!</p>
 
-<p>Below are the steps it took for me feel at home.</p>
-
-<blockquote><p>NOTE: This assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
-it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> is installed.</p></blockquote>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># These three lines are one, FYI. Seperated for readability</span>
-</span><span class='line'><span class="c"># though they should execute just fine copying and pasting as 3 lines.</span>
-</span><span class='line'>mkdir .homebrew <span class="o">&amp;&amp;</span>
-</span><span class='line'>curl -L https://github.com/mxcl/homebrew/tarball/master |
-</span><span class='line'>tar xz --strip 1 -C .homebrew
-</span><span class='line'>
-</span><span class='line'>~/.homebrew/bin/brew install git vim
-</span><span class='line'>
-</span><span class='line'><span class="c"># Setup Vim with my good friend Matt&#39;s config</span>
-</span><span class='line'>git clone https://github.com/MattRWallace/vimfiles.git ~/.vim
-</span><span class='line'>git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-</span><span class='line'>ln -s ~/.vim/.vimrc ~/.vimrc
-</span><span class='line'>vim +BundleInstall +qall
-</span><span class='line'>
-</span><span class='line'><span class="c"># zsh setup adapted from</span>
-</span><span class='line'><span class="c"># http://ricochen.wordpress.com/2012/09/30/mac-os-x-lion-zsh-installation-with-brew-guide/</span>
-</span><span class='line'>~/.homebrew/bin/brew install --disable-etcdir zsh
-</span><span class='line'>~/.homebrew/bin/brew install zsh-completions zsh-lovers
-</span><span class='line'>git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
-</span><span class='line'>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;unalias run-help</span>
-</span><span class='line'><span class="s2">autoload run-help</span>
-</span><span class='line'><span class="s2">HELPDIR=$HOME/.homebrew/share/zsh/helpfiles</span>
-</span><span class='line'><span class="s2">fpath=($HOME/.homebrew/share/zsh-completions $fpath)&quot;</span> &gt;&gt; ~/.zshrc
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi&quot;</span> &gt; .profile
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;export PATH=&#39;$HOME/.rvm/bin:$HOME/.homebrew/bin:$HOME/.bin:$PATH&#39;</span>
-</span><span class='line'><span class="s2">export EDITOR=&#39;$HOME/.homebrew/bin/vim&#39;&quot;</span> &gt; .zprofile
-</span><span class='line'>
-</span><span class='line'><span class="c"># Lets enter our new awesome Z shell</span>
-</span><span class='line'>~/.homebrew/bin/zsh -l
-</span><span class='line'>
-</span><span class='line'><span class="c"># Setup RVM for Octopress adapted from:</span>
-</span><span class='line'><span class="c"># http://thomasrieder.github.io/blog/2012/09/23/octopress-and-mountain-lion/</span>
-</span><span class='line'>curl -L https://get.rvm.io | zsh -s stable
-</span><span class='line'>rvm pkg install iconv
-</span><span class='line'>rvm install 1.9.3 --with-gcc<span class="o">=</span>clang --with-iconv-dir<span class="o">=</span><span class="nv">$rvm_path</span>/usr
-</span><span class='line'>rvm use 1.9.3
-</span><span class='line'>
-</span><span class='line'><span class="c"># Looks dangerous, but if it&#39;s a new OSX install, you&#39;re not missing anything</span>
-</span><span class='line'>rm -f .bash*
-</span><span class='line'>
-</span><span class='line'>mkdir Projects
-</span><span class='line'>
-</span><span class='line'><span class="c"># Get previous octopress install and setup it up on new machine</span>
-</span><span class='line'><span class="c"># or use git clone git://github.com/imathis/octopress.git for new install</span>
-</span><span class='line'>git clone git://github.com/&lt;yourUser&gt;/&lt;yourOctopress&gt;.git Projects/blog
-</span><span class='line'><span class="nb">cd </span>Projects/blog
-</span><span class='line'>gem install bundler
-</span><span class='line'>bundle install
-</span><span class='line'><span class="c"># or use `rake install` for new install to create branches anew</span>
-</span><span class='line'>git checkout -b <span class="nb">source </span>origin/source
-</span><span class='line'>rake setup_github_pages
-</span><span class='line'><span class="c"># if you have custom domain, fix your _config.yml as </span>
-</span><span class='line'><span class="c"># `rake setup_github_pages` changes your domain to &lt;user&gt;.github.io</span>
-</span><span class='line'>vim _config.yml
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/fossx-osx-setup-for-the-foss-mind/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -282,24 +163,12 @@ router and firewall needs all provided by the same machine. I&rsquo;ve since
 concluded that putting all your eggs in one basket is often not the
 best choice.</p>
 
-<p>For one, lots of work, by very intelligent and specialized individuals,
-has been put into different <abbr title="Operating Systems">OSs</abbr>
-and distributions that are tailored to excel at a certain task. I see no
-reason to throw all that expertise away.</p>
-
-<p>Second, the software packages needed to fulfil my needs are diverse,
-but also conflicting. For example, having a <abbr title="Graphical User Interface">GUI</abbr>,
-bleeding-edge HTPC software or an experimental file system running
-on a router/firewall should make anyone cringe. Of course, a reboot
-bringing down the whole house is rather annoying as well.</p>
-
-<p>Finally, even if I was okay with all of those drawbacks, my second
-goal puts a cap on how expensive said device can be. The hardware
-required to be the end-all-be-all home computer would be
-prohibitively expensive to try and provide to all my family and
-friends that I support.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/home-router-hunt-hardware/">Read on &rarr;</a>
+    </footer>
   
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[-rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:36:42-05:00</updated>
+  <updated>2013-06-21T20:08:17-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -28,6 +28,9 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://www.vim.org">vim</a> and <a href="http://www.zsh.org">zsh</a> with all their awesome plugins. Of course,
 <a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
 <a href="http://octopress.org">octopress</a> blog!</p>
+
+<!-- more -->
+
 
 <p>Below are the steps it took for me feel at home.</p>
 
@@ -177,6 +180,9 @@ There was a time when I thought it would be best to have my
 router and firewall needs all provided by the same machine. I&rsquo;ve since
 concluded that putting all your eggs in one basket is often not the
 best choice.</p>
+
+<!-- more -->
+
 
 <p>For one, lots of work, by very intelligent and specialized individuals,
 has been put into different <abbr title="Operating Systems">OSs</abbr>
