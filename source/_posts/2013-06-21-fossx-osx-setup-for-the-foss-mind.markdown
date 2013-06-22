@@ -34,6 +34,11 @@ tar xz --strip 1 -C .homebrew
 
 ~/.homebrew/bin/brew install git vim
 
+# Setup git
+git config --global user.name mitzip
+git config --global user.email <my email>
+git config --global push.default simple
+
 # Setup Vim with my good friend Matt's config
 git clone https://github.com/MattRWallace/vimfiles.git ~/.vim
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
