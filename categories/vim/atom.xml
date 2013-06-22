@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/vim/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-22T00:57:54-05:00</updated>
+  <updated>2013-06-22T01:02:22-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -22,7 +22,7 @@
 It could have been much worse, I could have been forced to work on M$ Windows. ;&ndash;) Though, OSX still
 takes some conversion to be amenable to the <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
 
-<p>At the very least, I need, one command, access to every open-source application in the world! Luckily,
+<p>At the very least, I need one-command access to every open-source application in the world! Luckily,
 <a href="http://mxcl.github.io/homebrew/">Homebrew</a> does just that for OSX,
 <a href="https://github.com/mxcl/homebrew/tree/master/Library/Formula">well almost</a>. Additionally, I need
 <a href="http://www.vim.org">vim</a> and <a href="http://www.zsh.org">zsh</a> with all their awesome plugins. Of course,
