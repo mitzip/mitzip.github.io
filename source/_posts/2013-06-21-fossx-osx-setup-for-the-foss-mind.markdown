@@ -55,9 +55,9 @@ echo "unalias run-help
 autoload run-help
 HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
 fpath=($HOME/.homebrew/share/zsh-completions $fpath)" >> ~/.zshrc 
-echo "if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi" > .profile
+echo "if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi" > ~/.profile
 echo "export PATH='$HOME/.rvm/bin:$HOME/.homebrew/bin:$HOME/.bin:$PATH'
-export EDITOR='$HOME/.homebrew/bin/vim'" > .zprofile
+export EDITOR='$HOME/.homebrew/bin/vim'" > ~/.zprofile
 
 # Lets enter our new awesome Z shell
 ~/.homebrew/bin/zsh -l
