@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | -rw-r--r-- mitzip]]></title>
   <link href="http://mitzip.com/categories/vim/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-21T19:11:44-05:00</updated>
+  <updated>2013-06-21T19:14:08-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[FOSSX Mountain Lion: OSX Setup For The FOSS Mind]]></title>
-    <link href="http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind/"/>
+    <title type="html"><![CDATA[FOSSX: OSX Setup For The FOSS Mind]]></title>
+    <link href="http://mitzip.com/fossx-osx-setup-for-the-foss-mind/"/>
     <updated>2013-06-21T14:18:00-05:00</updated>
-    <id>http://mitzip.com/fossx-mountain-lion-osx-setup-for-the-foss-mind</id>
+    <id>http://mitzip.com/fossx-osx-setup-for-the-foss-mind</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve recently had to convert from Linux to OSX as my primary workstation, work requirements and all.
 It could have been much worse, I could be forced to work on M$ Windows. ;&ndash;) Though, OSX still takes
 some conversion to be amenable to the <abbr title="Free and Open Source Software">FOSS</abbr> mind.</p>
