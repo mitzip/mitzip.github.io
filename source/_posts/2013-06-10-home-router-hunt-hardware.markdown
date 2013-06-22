@@ -20,6 +20,8 @@ router and firewall needs all provided by the same machine. I've since
 concluded that putting all your eggs in one basket is often not the 
 best choice.
 
+<!-- more -->
+
 For one, lots of work, by very intelligent and specialized individuals, 
 has been put into different <abbr title="Operating Systems">OSs</abbr> 
 and distributions that are tailored to excel at a certain task. I see no 
@@ -36,3 +38,5 @@ goal puts a cap on how expensive said device can be. The hardware
 required to be the end-all-be-all home computer would be 
 prohibitively expensive to try and provide to all my family and 
 friends that I support.
+
+<em>This post is still being written, more to come...</em>
