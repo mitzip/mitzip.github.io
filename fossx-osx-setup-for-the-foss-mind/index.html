@@ -100,8 +100,8 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://mxcl.github.io/homebrew/">Homebrew</a> does just that for OSX,
 <a href="https://github.com/mxcl/homebrew/tree/master/Library/Formula">well almost</a>. Additionally, I need
 <a href="http://www.vim.org">vim</a> and <a href="http://www.zsh.org">zsh</a> with all their awesome plugins. Of course,
-<a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
-<a href="http://octopress.org">octopress</a> blog!</p>
+<a href="http://git-scm.com">git</a> is a given. A few interpreters are also in order: PHP, Python, Node.js and Ruby.
+I need Ruby to update my <a href="http://octopress.org">octopress</a> blog!</p>
 
 <p>As an added bonus, <!-- more --> during my research, I <a href="http://code2k.net/blog/2011-07-20/">ran across</a> a fancy
 replacement for the stock OSX Terminal.app, enter <a href="http://www.iterm2.com/#/section/documentation/highlights">iTerm2.app</a>.
@@ -109,7 +109,7 @@ I highly recommend trying it out! I think a descriptive analogy would be, <em>zs
 
 <p>Below are the steps it took for me feel at home.</p>
 
-<blockquote><p>NOTE: This assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
+<blockquote><p>NOTE: This entire guide assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
 it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> is installed.</p></blockquote>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -183,6 +183,14 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 <span class='line-number'>69</span>
 <span class='line-number'>70</span>
 <span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># These three lines are one, FYI. Seperated for readability</span>
@@ -191,15 +199,23 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span><span class='line'>curl -L https://github.com/mxcl/homebrew/tarball/master |
 </span><span class='line'>tar xz --strip 1 -C .homebrew
 </span><span class='line'>
+</span><span class='line'><span class="c"># The Essentials</span>
+</span><span class='line'><span class="c"># Python Notes:</span>
 </span><span class='line'><span class="c"># Mountain Lion comes with Python 2.7, however still requires workarounds for installing</span>
 </span><span class='line'><span class="c"># python packages without root. Homebrewed Python works around all that mess outta the box.</span>
 </span><span class='line'><span class="c"># Plus, I need python3. :-) See references below for more info:</span>
 </span><span class='line'><span class="c"># http://docs.python-guide.org/en/latest/starting/install/osx.html</span>
 </span><span class='line'><span class="c"># https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python</span>
-</span><span class='line'>~/.homebrew/bin/brew install git vim python python3
+</span><span class='line'>~/.homebrew/bin/brew install git vim python python3 node npm
 </span><span class='line'>
 </span><span class='line'><span class="c"># Link python apps (IDLE and IDLE3) in Applications directory</span>
 </span><span class='line'>mkdir ~/Applications <span class="o">&amp;&amp;</span> brew linkapps
+</span><span class='line'>
+</span><span class='line'><span class="c"># Tap homebrew PHP repo and install</span>
+</span><span class='line'>brew tap josegonzalez/php
+</span><span class='line'>~/.homebrew/bin/brew josegonzalez/php/php54-mongo josegonzalez/php/php54-xdebug
+</span><span class='line'>~/.homebrew/bin/brew josegonzalez/php/php54-apc josegonzalez/php/php54-mcrypt
+</span><span class='line'>~/.homebrew/bin/brew josegonzalez/php/phpdocumentor composer
 </span><span class='line'>
 </span><span class='line'><span class="c"># Setup git</span>
 </span><span class='line'>git config --global user.name &lt;my name&gt;

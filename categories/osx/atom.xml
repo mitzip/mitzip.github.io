@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/osx/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T01:45:03-05:00</updated>
+  <updated>2013-06-23T02:10:28-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -26,8 +26,8 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://mxcl.github.io/homebrew/">Homebrew</a> does just that for OSX,
 <a href="https://github.com/mxcl/homebrew/tree/master/Library/Formula">well almost</a>. Additionally, I need
 <a href="http://www.vim.org">vim</a> and <a href="http://www.zsh.org">zsh</a> with all their awesome plugins. Of course,
-<a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
-<a href="http://octopress.org">octopress</a> blog!</p>
+<a href="http://git-scm.com">git</a> is a given. A few interpreters are also in order: PHP, Python, Node.js and Ruby.
+I need Ruby to update my <a href="http://octopress.org">octopress</a> blog!</p>
 
 <p>As an added bonus, <!-- more --> during my research, I <a href="http://code2k.net/blog/2011-07-20/">ran across</a> a fancy
 replacement for the stock OSX Terminal.app, enter <a href="http://www.iterm2.com/#/section/documentation/highlights">iTerm2.app</a>.
@@ -35,7 +35,7 @@ I highly recommend trying it out! I think a descriptive analogy would be, <em>zs
 
 <p>Below are the steps it took for me feel at home.</p>
 
-<blockquote><p>NOTE: This assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
+<blockquote><p>NOTE: This entire guide assumes you do <em>NOT</em> have root access, this is my employer&rsquo;s machine after all. However,
 it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc8">Command Line Tools for Xcode</a> is installed.</p></blockquote>
 
 <p>``` sh
@@ -49,6 +49,10 @@ cd $HOME</p>
 curl -L <a href="https://github.com/mxcl/homebrew/tarball/master">https://github.com/mxcl/homebrew/tarball/master</a> |
 tar xz &mdash;strip 1 -C .homebrew</p>
 
+<h1>The Essentials</h1>
+
+<h1>Python Notes:</h1>
+
 <h1>Mountain Lion comes with Python 2.7, however still requires workarounds for installing</h1>
 
 <h1>python packages without root. Homebrewed Python works around all that mess outta the box.</h1>
@@ -59,11 +63,18 @@ tar xz &mdash;strip 1 -C .homebrew</p>
 
 <h1><a href="https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python">https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python</a></h1>
 
-<p>~/.homebrew/bin/brew install git vim python python3</p>
+<p>~/.homebrew/bin/brew install git vim python python3 node npm</p>
 
 <h1>Link python apps (IDLE and IDLE3) in Applications directory</h1>
 
 <p>mkdir ~/Applications &amp;&amp; brew linkapps</p>
+
+<h1>Tap homebrew PHP repo and install</h1>
+
+<p>brew tap josegonzalez/php
+~/.homebrew/bin/brew josegonzalez/php/php54-mongo josegonzalez/php/php54-xdebug
+~/.homebrew/bin/brew josegonzalez/php/php54-apc josegonzalez/php/php54-mcrypt
+~/.homebrew/bin/brew josegonzalez/php/phpdocumentor composer</p>
 
 <h1>Setup git</h1>
 
