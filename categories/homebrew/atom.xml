@@ -4,7 +4,7 @@
   <title><![CDATA[Category: homebrew | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-22T21:47:43-05:00</updated>
+  <updated>2013-06-22T21:51:50-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -29,9 +29,9 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
 <a href="http://octopress.org">octopress</a> blog!</p>
 
-<p>As an added bonus<!-- more --> I <a href="http://code2k.net/blog/2011-07-20/">ran across</a> a fancy replacement for the
-stock OSX Terminal.app, enter <a href="http://www.iterm2.com/">iTerm.app</a>. I highly recommend trying it out, zsh is to
-bash what iTerm is to Terminal.app.</p>
+<p>As an added bonus, <!-- more --> during my research, I <a href="http://code2k.net/blog/2011-07-20/">ran across</a> a fancy
+replacement for the stock OSX Terminal.app, enter <a href="http://www.iterm2.com/#/section/documentation/highlights">iTerm2.app</a>.
+I highly recommend trying it out! I think a descriptive analogy would be, <em>zsh</em> is to <em>bash</em> what <em>iTerm2</em> is to <em>Terminal.app</em>.</p>
 
 <p>Below are the steps it took for me feel at home.</p>
 
