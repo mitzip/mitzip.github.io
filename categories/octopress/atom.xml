@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/octopress/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T02:14:23-05:00</updated>
+  <updated>2013-06-23T13:44:08-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -148,7 +148,12 @@ rake setup_github_pages</p>
 <p>vim _config.yml
 ```</p>
 
-<p><a href="https://launchpad.net/eloquent">Eloquent</a> is the best Bible software for OSX, written in Objective-C.</p>
+<h2>Icing on the Cake</h2>
+
+<p>Though this final peice of software is not required for the FOSS mind, it is required for OSX to
+be useful for myself. <a href="https://launchpad.net/eloquent">Eloquent</a> is the best Bible software I&rsquo;ve found
+for OSX. It runs natively written in Objective-C, just as it&rsquo;s Linux counterpart <a href="http://xiphos.org">Xiphos</a>
+run natively written in C.</p>
 ]]></content>
   </entry>
   
