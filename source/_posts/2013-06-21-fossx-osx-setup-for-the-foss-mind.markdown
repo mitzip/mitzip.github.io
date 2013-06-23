@@ -17,7 +17,9 @@ At the very least, I need one-command access to every open-source application in
 [git](http://git-scm.com) is a given. Finally, I need to be able to update my 
 [octopress](http://octopress.org) blog!
 
-<!-- more -->
+As an added bonus, <!-- more --> during my research, I [ran across](http://code2k.net/blog/2011-07-20/) a fancy 
+replacement for the stock OSX Terminal.app, enter [iTerm2.app](http://www.iterm2.com/#/section/documentation/highlights). 
+I highly recommend trying it out! I think a descriptive analogy would be, *zsh* is to *bash* what *iTerm2* is to *Terminal.app*.
 
 Below are the steps it took for me feel at home.
 > NOTE: This assumes you do *NOT* have root access, this is my employer's machine after all. However,
