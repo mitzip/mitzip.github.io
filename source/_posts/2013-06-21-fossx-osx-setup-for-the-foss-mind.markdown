@@ -3,7 +3,7 @@ layout: post
 title: "FOSSX: OSX Setup For The FOSS Mind"
 date: 2013-06-21 14:18
 comments: true
-categories: [apple,osx,mountain lion,linux,foss,open-source,homebrew,git,vim,zsh,rvm,octopress] 
+categories: [apple,osx,mountain lion,linux,foss,open-source,homebrew,git,vim,zsh,rvm,php,python,node.js,octopress] 
 ---
 
 I've recently had to convert from Linux to OSX as my primary workstation, work requirements and all.
@@ -106,5 +106,7 @@ rake setup_github_pages
 # `rake setup_github_pages` changes your domain to <user>.github.io
 vim _config.yml
 ```
-
-[Eloquent](https://launchpad.net/eloquent) is the best Bible software for OSX, written in Objective-C.
+## Icing on the Cake
+Though this final peice of software is not required for the FOSS mind, it is required for my FOSS mind. 
+[Eloquent](https://launchpad.net/eloquent) is the best Bible software I've found for OSX. It runs natively 
+written in Objective-C, just as it's Linux counterpart [Xiphos](http://xiphos.org) run natively written in C.
