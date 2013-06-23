@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/vim/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T02:12:17-05:00</updated>
+  <updated>2013-06-23T02:14:23-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -26,7 +26,7 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://mxcl.github.io/homebrew/">Homebrew</a> does just that for OSX,
 <a href="https://github.com/mxcl/homebrew/tree/master/Library/Formula">well almost</a>. Additionally, I need
 <a href="http://www.vim.org">vim</a> and <a href="http://www.zsh.org">zsh</a> with all their awesome plugins. Of course,
-<a href="http://git-scm.com">git</a> is a given. A few interpreters are also in order: PHP, Python, Node.js and Ruby.
+<a href="http://git-scm.com">git</a> is a given, and a few interpreters are also in order: PHP, Python, Node.js and Ruby.
 I need Ruby to update my <a href="http://octopress.org">octopress</a> blog!</p>
 
 <p>As an added bonus, <!-- more --> during my research, I <a href="http://code2k.net/blog/2011-07-20/">ran across</a> a fancy
