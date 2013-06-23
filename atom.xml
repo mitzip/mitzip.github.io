@@ -4,7 +4,7 @@
   <title><![CDATA[drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-22T01:28:05-05:00</updated>
+  <updated>2013-06-22T21:32:22-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -29,8 +29,8 @@ takes some conversion to be amenable to the <abbr title="Free and Open Source So
 <a href="http://git-scm.com">git</a> is a given. Finally, I need to be able to update my
 <a href="http://octopress.org">octopress</a> blog!</p>
 
-<!-- more -->
-
+<p>As an added bonus<!-- more --> I ran across a fancy replacement for the stock OSX Terminal.app, enter
+<a href="http://www.iterm2.com/">iTerm.app</a>. I highly recommend trying it out, zsh is to bash what iTerm is to Terminal.app.</p>
 
 <p>Below are the steps it took for me feel at home.</p>
 
