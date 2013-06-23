@@ -14,7 +14,7 @@ At the very least, I need one-command access to every open-source application in
 [Homebrew](http://mxcl.github.io/homebrew/) does just that for OSX, 
 [well almost](https://github.com/mxcl/homebrew/tree/master/Library/Formula). Additionally, I need 
 [vim](http://www.vim.org) and [zsh](http://www.zsh.org) with all their awesome plugins. Of course, 
-[git](http://git-scm.com) is a given. A few interpreters are also in order: PHP, Python, Node.js and Ruby.
+[git](http://git-scm.com) is a given, and a few interpreters are also in order: PHP, Python, Node.js and Ruby.
 I need Ruby to update my [octopress](http://octopress.org) blog!
 
 As an added bonus, <!-- more --> during my research, I [ran across](http://code2k.net/blog/2011-07-20/) a fancy 
