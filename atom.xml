@@ -4,7 +4,7 @@
   <title><![CDATA[drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T02:10:28-05:00</updated>
+  <updated>2013-06-23T02:12:17-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -135,10 +135,10 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span><span class='line'>~/.homebrew/bin/brew install git vim python python3 node npm
 </span><span class='line'>
 </span><span class='line'><span class="c"># Link python apps (IDLE and IDLE3) in Applications directory</span>
-</span><span class='line'>mkdir ~/Applications <span class="o">&amp;&amp;</span> brew linkapps
+</span><span class='line'>mkdir ~/Applications <span class="o">&amp;&amp;</span> ~/.homebrew/bin/brew linkapps
 </span><span class='line'>
 </span><span class='line'><span class="c"># Tap homebrew PHP repo and install</span>
-</span><span class='line'>brew tap josegonzalez/php
+</span><span class='line'>~/.homebrew/bin/brew tap josegonzalez/php
 </span><span class='line'>~/.homebrew/bin/brew josegonzalez/php/php54-mongo josegonzalez/php/php54-xdebug
 </span><span class='line'>~/.homebrew/bin/brew josegonzalez/php/php54-apc josegonzalez/php/php54-mcrypt
 </span><span class='line'>~/.homebrew/bin/brew josegonzalez/php/phpdocumentor composer
