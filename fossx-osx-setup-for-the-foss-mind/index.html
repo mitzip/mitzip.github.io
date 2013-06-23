@@ -174,6 +174,10 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 <span class='line-number'>60</span>
 <span class='line-number'>61</span>
 <span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># These three lines are one, FYI. Seperated for readability</span>
@@ -182,11 +186,15 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span><span class='line'>curl -L https://github.com/mxcl/homebrew/tarball/master |
 </span><span class='line'>tar xz --strip 1 -C .homebrew
 </span><span class='line'>
-</span><span class='line'>~/.homebrew/bin/brew install git vim
+</span><span class='line'>~/.homebrew/bin/brew install git vim python python3
+</span><span class='line'>
+</span><span class='line'><span class="c"># Link python apps (IDLE and IDLE3) in Applications directory</span>
+</span><span class='line'>mkdir ~/Applications <span class="o">&amp;&amp;</span> brew linkapps
 </span><span class='line'>
 </span><span class='line'><span class="c"># Setup git</span>
-</span><span class='line'>git config --global user.name mitzip
+</span><span class='line'>git config --global user.name &lt;my name&gt;
 </span><span class='line'>git config --global user.email &lt;my email&gt;
+</span><span class='line'><span class="c"># So `git push` just pushs my branch I&#39;m on, fails if not on remote</span>
 </span><span class='line'>git config --global push.default simple
 </span><span class='line'>
 </span><span class='line'><span class="c"># Setup Vim with my good friend Matt&#39;s config</span>
@@ -239,7 +247,7 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<p><a href="https://launchpad.net/eloquent">Eloquent</a> is the best Bible software for OSX, written in Objective-C.</p>
 </div>
 
 

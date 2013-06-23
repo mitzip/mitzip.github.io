@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/osx/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-22T23:43:13-05:00</updated>
+  <updated>2013-06-23T01:41:27-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -49,13 +49,20 @@ cd $HOME</p>
 curl -L <a href="https://github.com/mxcl/homebrew/tarball/master">https://github.com/mxcl/homebrew/tarball/master</a> |
 tar xz &mdash;strip 1 -C .homebrew</p>
 
-<p>~/.homebrew/bin/brew install git vim</p>
+<p>~/.homebrew/bin/brew install git vim python python3</p>
+
+<h1>Link python apps (IDLE and IDLE3) in Applications directory</h1>
+
+<p>mkdir ~/Applications &amp;&amp; brew linkapps</p>
 
 <h1>Setup git</h1>
 
-<p>git config &mdash;global user.name mitzip
-git config &mdash;global user.email <my email>
-git config &mdash;global push.default simple</p>
+<p>git config &mdash;global user.name <my name>
+git config &mdash;global user.email <my email></p>
+
+<h1>So <code>git push</code> just pushs my branch I&rsquo;m on, fails if not on remote</h1>
+
+<p>git config &mdash;global push.default simple</p>
 
 <h1>Setup Vim with my good friend Matt&rsquo;s config</h1>
 
@@ -119,6 +126,8 @@ rake setup_github_pages</p>
 
 <p>vim _config.yml
 ```</p>
+
+<p><a href="https://launchpad.net/eloquent">Eloquent</a> is the best Bible software for OSX, written in Objective-C.</p>
 ]]></content>
   </entry>
   
