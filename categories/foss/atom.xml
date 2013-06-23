@@ -4,7 +4,7 @@
   <title><![CDATA[Category: foss | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/foss/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T01:41:27-05:00</updated>
+  <updated>2013-06-23T01:45:03-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -48,6 +48,16 @@ cd $HOME</p>
 <p>mkdir .homebrew &amp;&amp;
 curl -L <a href="https://github.com/mxcl/homebrew/tarball/master">https://github.com/mxcl/homebrew/tarball/master</a> |
 tar xz &mdash;strip 1 -C .homebrew</p>
+
+<h1>Mountain Lion comes with Python 2.7, however still requires workarounds for installing</h1>
+
+<h1>python packages without root. Homebrewed Python works around all that mess outta the box.</h1>
+
+<h1>Plus, I need python3. :&ndash;) See references below for more info:</h1>
+
+<h1><a href="http://docs.python-guide.org/en/latest/starting/install/osx.html">http://docs.python-guide.org/en/latest/starting/install/osx.html</a></h1>
+
+<h1><a href="https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python">https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python</a></h1>
 
 <p>~/.homebrew/bin/brew install git vim python python3</p>
 
