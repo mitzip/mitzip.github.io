@@ -14,15 +14,15 @@ At the very least, I need one-command access to every open-source application in
 [Homebrew](http://mxcl.github.io/homebrew/) does just that for OSX, 
 [well almost](https://github.com/mxcl/homebrew/tree/master/Library/Formula). Additionally, I need 
 [vim](http://www.vim.org) and [zsh](http://www.zsh.org) with all their awesome plugins. Of course, 
-[git](http://git-scm.com) is a given. Finally, I need to be able to update my 
-[octopress](http://octopress.org) blog!
+[git](http://git-scm.com) is a given. A few interpreters are also in order: PHP, Python, Node.js and Ruby.
+I need Ruby to update my [octopress](http://octopress.org) blog!
 
 As an added bonus, <!-- more --> during my research, I [ran across](http://code2k.net/blog/2011-07-20/) a fancy 
 replacement for the stock OSX Terminal.app, enter [iTerm2.app](http://www.iterm2.com/#/section/documentation/highlights). 
 I highly recommend trying it out! I think a descriptive analogy would be, *zsh* is to *bash* what *iTerm2* is to *Terminal.app*.
 
 Below are the steps it took for me feel at home.
-> NOTE: This assumes you do *NOT* have root access, this is my employer's machine after all. However,
+> NOTE: This entire guide assumes you do *NOT* have root access, this is my employer's machine after all. However,
 it *DOES* assume that [Command Line Tools for Xcode](https://medium.com/kr-projects/6e54e8c50dc8) is installed.
 
 ``` sh
@@ -34,11 +34,28 @@ mkdir .homebrew &&
 curl -L https://github.com/mxcl/homebrew/tarball/master | 
 tar xz --strip 1 -C .homebrew
 
-~/.homebrew/bin/brew install git vim
+# The Essentials
+# Python Notes:
+# Mountain Lion comes with Python 2.7, however still requires workarounds for installing
+# python packages without root. Homebrewed Python works around all that mess outta the box.
+# Plus, I need python3. :-) See references below for more info:
+# http://docs.python-guide.org/en/latest/starting/install/osx.html
+# https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
+~/.homebrew/bin/brew install git vim python python3 node npm
+
+# Link python apps (IDLE and IDLE3) in Applications directory
+mkdir ~/Applications && ~/.homebrew/bin/brew linkapps
+
+# Tap homebrew PHP repo and install
+~/.homebrew/bin/brew tap josegonzalez/php
+~/.homebrew/bin/brew josegonzalez/php/php54-mongo josegonzalez/php/php54-xdebug 
+~/.homebrew/bin/brew josegonzalez/php/php54-apc josegonzalez/php/php54-mcrypt 
+~/.homebrew/bin/brew josegonzalez/php/phpdocumentor composer
 
 # Setup git
-git config --global user.name mitzip
+git config --global user.name <my name>
 git config --global user.email <my email>
+# So `git push` just pushs my branch I'm on, fails if not on remote
 git config --global push.default simple
 
 # Setup Vim with my good friend Matt's config
@@ -58,7 +75,7 @@ autoload run-help
 HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
 fpath=($HOME/.homebrew/share/zsh-completions $fpath)" >> ~/.zshrc 
 echo "if [ -x ~/.homebrew/bin/zsh ]; then exec ~/.homebrew/bin/zsh -l; fi" > ~/.profile
-echo "export PATH='$HOME/.rvm/bin:$HOME/.homebrew/bin:$HOME/.bin:$PATH'
+echo "export PATH='$HOME/.rvm/bin:$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$HOME/.bin:$PATH'
 export EDITOR='$HOME/.homebrew/bin/vim'" > ~/.zprofile
 
 # Lets enter our new awesome Z shell
@@ -90,3 +107,4 @@ rake setup_github_pages
 vim _config.yml
 ```
 
+[Eloquent](https://launchpad.net/eloquent) is the best Bible software for OSX, written in Objective-C.
