@@ -4,7 +4,7 @@
   <title><![CDATA[drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T16:57:19-05:00</updated>
+  <updated>2013-06-24T01:50:22-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -117,6 +117,12 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 <span class='line-number'>77</span>
 <span class='line-number'>78</span>
 <span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># These three lines are one, FYI. Seperated for readability</span>
@@ -154,6 +160,12 @@ it <em>DOES</em> assume that <a href="https://medium.com/kr-projects/6e54e8c50dc
 </span><span class='line'>git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 </span><span class='line'>ln -s ~/.vim/.vimrc ~/.vimrc
 </span><span class='line'>vim +BundleInstall +qall
+</span><span class='line'><span class="c"># If using background image or transparency in your terminal emulator </span>
+</span><span class='line'><span class="c"># (like iTerm), check this out http://superuser.com/a/398928/206619</span>
+</span><span class='line'><span class="c"># Then comment out line 19 in your .vimrc, it should look like this</span>
+</span><span class='line'><span class="c"># Bundle &#39;spf13/vim-colors&#39;</span>
+</span><span class='line'><span class="c"># That particular vim plugin will prevent your background from being</span>
+</span><span class='line'><span class="c"># transparent, even with color scheme edits.</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># zsh setup adapted from</span>
 </span><span class='line'><span class="c"># http://ricochen.wordpress.com/2012/09/30/mac-os-x-lion-zsh-installation-with-brew-guide/</span>

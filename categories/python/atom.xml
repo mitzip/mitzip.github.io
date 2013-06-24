@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | drwxr-xr-x mitzip]]></title>
   <link href="http://mitzip.com/categories/python/atom.xml" rel="self"/>
   <link href="http://mitzip.com/"/>
-  <updated>2013-06-23T16:57:19-05:00</updated>
+  <updated>2013-06-24T01:50:22-05:00</updated>
   <id>http://mitzip.com/</id>
   <author>
     <name><![CDATA[mitzip]]></name>
@@ -91,6 +91,18 @@ git config &mdash;global user.email <my email></p>
 git clone <a href="https://github.com/gmarik/vundle.git">https://github.com/gmarik/vundle.git</a> ~/.vim/bundle/vundle
 ln -s ~/.vim/.vimrc ~/.vimrc
 vim +BundleInstall +qall</p>
+
+<h1>If using background image or transparency in your terminal emulator</h1>
+
+<h1>(like iTerm), check this out <a href="http://superuser.com/a/398928/206619">http://superuser.com/a/398928/206619</a></h1>
+
+<h1>Then comment out line 19 in your .vimrc, it should look like this</h1>
+
+<h1>Bundle &lsquo;spf13/vim-colors&rsquo;</h1>
+
+<h1>That particular vim plugin will prevent your background from being</h1>
+
+<h1>transparent, even with color scheme edits.</h1>
 
 <h1>zsh setup adapted from</h1>
 
